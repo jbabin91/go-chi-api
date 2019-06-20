@@ -12,9 +12,15 @@ import (
 func main() {
 	port := ":3000"
 	feed := newsfeed.New()
+
 	feed.Add(newsfeed.Item{
 		Title: "Hello",
 		Post:  "World",
+	})
+
+	feed.Add(newsfeed.Item{
+		Title: "Second",
+		Post:  "item",
 	})
 
 	r := chi.NewRouter()
